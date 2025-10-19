@@ -1,0 +1,192 @@
+:root {
+    --bg-color: #1a1a1d;
+    --surface-color: #2c2c34;
+    --primary-color: #9f7aea;
+    --secondary-color: #48bb78;
+    --on-bg-color: #e0e0e0;
+    --on-surface-color: #ffffff;
+    --error-color: #f56565;
+    --border-color: #4a4a52;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--on-bg-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem; /* rounded-2xl */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    color: var(--on-surface-color);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+header p {
+    color: var(--on-bg-color);
+    opacity: 0.8;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--on-bg-color);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--on-surface-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#encrypt-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+#encrypt-btn:hover {
+    background-color: #8b5cf6;
+}
+
+#decrypt-btn {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+#decrypt-btn:hover {
+    background-color: #38a169;
+}
+
+.result-container {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.result-container h2 {
+    color: var(--on-surface-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.output-box {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    min-height: 80px;
+    border: 1px solid var(--border-color);
+    word-wrap: break-word;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--on-surface-color);
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.output-box .placeholder {
+    color: #888;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.copy-btn {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.6rem 1.25rem;
+}
+
+.copy-btn:hover {
+    background-color: rgba(159, 122, 234, 0.1);
+}
+
+.copy-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--border-color);
+    color: var(--on-bg-color);
+    background-color: transparent;
+}
+
+.error-box {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: rgba(245, 101, 101, 0.1);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    color: var(--on-bg-color);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
